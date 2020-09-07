@@ -1,8 +1,8 @@
 require 'open-uri'
 
 class FlatsController < ApplicationController
-  before_action :set_flats
   URL = 'https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json'.freeze
+  before_action :set_flats
 
   def index; end
 
@@ -19,5 +19,4 @@ class FlatsController < ApplicationController
     response = open(URL).read
     @flats = JSON.parse(response)
   end
-
 end
