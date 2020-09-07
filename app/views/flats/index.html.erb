@@ -1,0 +1,20 @@
+<h1>Flats</h1>
+
+<div class="flats">
+  <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat['id']) do %>
+      <div class="card-trip">
+        <img src="<%= flat['imageUrl'] %>" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= flat['name'] %></h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-trip-pricing"><%= flat['priceCurrency'] %> <%= flat['price'] %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
